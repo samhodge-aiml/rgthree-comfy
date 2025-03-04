@@ -41,31 +41,31 @@ from .py.image_comparer import RgthreeImageComparer
 from .py.power_lora_loader import RgthreePowerLoraLoader
 
 NODE_CLASS_MAPPINGS = {
-  # RgthreeBigContext.NAME: RgthreeBigContext,
-  # RgthreeContext.NAME: RgthreeContext,
-  # RgthreeContextSwitch.NAME: RgthreeContextSwitch,
-  # RgthreeContextSwitchBig.NAME: RgthreeContextSwitchBig,
-  # RgthreeContextMerge.NAME: RgthreeContextMerge,
-  # RgthreeContextMergeBig.NAME: RgthreeContextMergeBig,
-  # RgthreeDisplayInt.NAME: RgthreeDisplayInt,
-  # RgthreeDisplayAny.NAME: RgthreeDisplayAny,
-  # RgthreeLoraLoaderStack.NAME: RgthreeLoraLoaderStack,
-  # RgthreeSeed.NAME: RgthreeSeed,
-  # RgthreeImageInsetCrop.NAME: RgthreeImageInsetCrop,
-  # RgthreePowerPrompt.NAME: RgthreePowerPrompt,
-  # RgthreePowerPromptSimple.NAME: RgthreePowerPromptSimple,
-  # RgthreeKSamplerConfig.NAME: RgthreeKSamplerConfig,
-  # RgthreeSDXLEmptyLatentImage.NAME: RgthreeSDXLEmptyLatentImage,
-  # RgthreeSDXLPowerPromptPositive.NAME: RgthreeSDXLPowerPromptPositive,
-  # RgthreeSDXLPowerPromptSimple.NAME: RgthreeSDXLPowerPromptSimple,
-  # RgthreeAnySwitch.NAME: RgthreeAnySwitch,
-  # RgthreeImageComparer.NAME: RgthreeImageComparer,
+  RgthreeBigContext.NAME: RgthreeBigContext,
+  RgthreeContext.NAME: RgthreeContext,
+  RgthreeContextSwitch.NAME: RgthreeContextSwitch,
+  RgthreeContextSwitchBig.NAME: RgthreeContextSwitchBig,
+  RgthreeContextMerge.NAME: RgthreeContextMerge,
+  RgthreeContextMergeBig.NAME: RgthreeContextMergeBig,
+  RgthreeDisplayInt.NAME: RgthreeDisplayInt,
+  RgthreeDisplayAny.NAME: RgthreeDisplayAny,
+  RgthreeLoraLoaderStack.NAME: RgthreeLoraLoaderStack,
+  RgthreeSeed.NAME: RgthreeSeed,
+  RgthreeImageInsetCrop.NAME: RgthreeImageInsetCrop,
+  RgthreePowerPrompt.NAME: RgthreePowerPrompt,
+  RgthreePowerPromptSimple.NAME: RgthreePowerPromptSimple,
+  RgthreeKSamplerConfig.NAME: RgthreeKSamplerConfig,
+  RgthreeSDXLEmptyLatentImage.NAME: RgthreeSDXLEmptyLatentImage,
+  RgthreeSDXLPowerPromptPositive.NAME: RgthreeSDXLPowerPromptPositive,
+  RgthreeSDXLPowerPromptSimple.NAME: RgthreeSDXLPowerPromptSimple,
+  RgthreeAnySwitch.NAME: RgthreeAnySwitch,
+  RgthreeImageComparer.NAME: RgthreeImageComparer,
   RgthreePowerLoraLoader.NAME: RgthreePowerLoraLoader,
 }
 
-# if get_config_value('unreleased.dynamic_context.enabled') is True:
-#   NODE_CLASS_MAPPINGS[RgthreeDynamicContext.NAME] = RgthreeDynamicContext
-#   NODE_CLASS_MAPPINGS[RgthreeDynamicContextSwitch.NAME] = RgthreeDynamicContextSwitch
+if get_config_value('unreleased.dynamic_context.enabled') is True:
+  NODE_CLASS_MAPPINGS[RgthreeDynamicContext.NAME] = RgthreeDynamicContext
+  NODE_CLASS_MAPPINGS[RgthreeDynamicContextSwitch.NAME] = RgthreeDynamicContextSwitch
 
 # WEB_DIRECTORY is the comfyui nodes directory that ComfyUI will link and auto-load.
 WEB_DIRECTORY = "./web/comfyui"
